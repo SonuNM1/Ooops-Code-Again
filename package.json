@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "use-context-selector": "^2.0.0",
+    "zustand": "^5.0.3"
+  }
+}
