@@ -188,3 +188,138 @@
 - Without Docker: Everyone sets up the project manually and risks environment inconsistencies. 
 
 - With Docker: Our project is neatly packaged with everything it needs, ensuring consistency and simplicity across all machines. 
+
+## .dockerignore 
+
+A .dockerignore file is used to exclude files and directories from being copied into the Docker image when using the 'docker build' command. It works similarly to a .gitignore file in Git. 
+
+- Reduces image size: Prevents unnecessary files (node_modules, logs, .env) from bloating the Docker image. 
+
+- Improve Build Performance: Skips files that aren't needed, making the build process faster. 
+
+- Enhance Security: Keeps sensitive files, like .env or credentials, out of the Docker image. 
+
+## 🗑️ Delete Image and Container (With Docker Desktop and Terminal/CMD) : 
+
+- **Remove Images:** removes a specific image by its name or ID
+
+    docker image rm image_name
+
+    docker image rm image_name -f
+
+- **List Containers:** 
+
+    docker ps -a 
+
+- **Remove Containers:** 
+
+    docker container rm container_name
+
+    docker container rm container_name -f
+
+- **Clean Up:** Deletes all unused data. Cleans everything not currently in use
+
+    docker system prune -a
+
+- **Build Images:** . means current directory 
+
+    docker build -t image_name .
+
+    docker build -t image_name:v2 .
+
+        - Builds the image and assigns a version v2 to the image. 
+
+- **Run Containers:** Runs a container from the 'basic-app:v2' image, names the container 'basic-app-container-v2' and maps port 5500 of our machine to port 5500 inside the container. 
+
+    docker run -name basic-app-container-v2 -p 5500:5500 basic-app:v2
+
+- docker image 
+
+## Why Images Can't be Updated? 
+
+- 🏗️ **Immutability Principle**
+
+    - Once an image is created, it becomes a fixed snapshot of our application and its environment. 
+
+    - This ensures that every time we create a container from the image, it starts in the same state - preventing unexpected changes. 
+
+- 🔒 **Version Control and Traceability**:     
+
+    - If images could be updated directly, it would be hard to track what changed and when. 
+
+    - Docker forces us to create a new image for every change, making deployments more predictable and traceable. 
+
+    - For every change, we have to make a new Image. 
+
+- ⚙️ **Layered Architecture**: 
+
+    - Docker uses a layered file-system. Each command in the 'Dockerfile' creates a new layer on top of the previous one. 
+
+    - When we change the code, dependencies, or configuration, a new image is created by adding new layers instead of modifying existing ones. 
+
+- 📦 **Container Consistency**: 
+
+    - If we update an image directly, existing containers would become inconsistent, as they'd still be running the old version. 
+
+ 
+## Docker Image Versioning and Management
+
+**What is an Image Version?** 
+
+    - In Docker, images are versioned using tags. 
+
+    - A tag is a label used to differentiate versions of an image
+
+    - docker build -t basic-app:v1.0 .
+
+**Run a Container from a Specific Version**
+
+- docker run -d -p 5000:5000 basic-app:v1.0
+
+    This runs the container with version v1.0 and maps port 5000 of the host to 5000 of the container. 
+
+
+## Volume in Docker
+
+A Volume in Docker is used to persist data generated and used by Docker containers. By default, when a container stops or is removed, its data is gone. Volume solve this by creating a separate location outside the container's filesystem to store data. 
+
+- Volume allows continuous changes to be reflected in real-time inside the running container. 
+
+- Perfect for development environments where you're making frequent changes to files. 
+
+- Create a named volume: 
+
+    docker volume create app-data 
+
+## Docker Compose File 
+
+A Docker Compose file (docker-compose.yml) is used to define and run multi-container Docker applications. Instead of running multiple 'docker run' commands, we can manage everything in a single file. It simplifies starting, stopping, and managing and multiple containers at once. 
+
+    - Define all services (containers) in one file. 
+
+    - Easily manage networks, volumes, and dependencies. 
+
+    - One command to start or stop everything 
+
+    - docker compose up
+
+
+## 🐳 Docker Hub 
+
+- **docker login** 
+
+- **Tag Image** 
+
+    docker tag basic-app:latest sonumahto/basic-app:latest
+
+- **Push Image** 
+
+    docker push sonumahto/basic-app:latest
+
+- **Pull Image**
+
+    docker pull sonumahto/basic-app:latest
+
+
+## How to make the app live on Docker? 
+

@@ -2,6 +2,8 @@
 
 FROM node:latest
 
+RUN npm install -g nodemon 
+
 # Copy local machine files into the Docker container - first dot refers to the current directory on our local machine, second dot refers to the working directory inside the container  
 
 COPY . .
@@ -16,4 +18,4 @@ EXPOSE 5000
 
 # Command to run the app 
 
-CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]

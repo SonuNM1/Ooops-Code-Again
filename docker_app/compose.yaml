@@ -1,0 +1,12 @@
+
+# Define all services (containers) in this app
+services:
+  # Service named 'img'
+  img:
+    # Build image from the dockerfile in the current directory 
+    build: .
+    # Assign a custom name to the container 
+    container_name: basic-container 
+    # Map port 5500 on the host to port 5500 inside the container 
+    ports: 
+      - 5500:5500
