@@ -9,6 +9,7 @@ import Courses from './components/Courses'
 import MockTests from './components/Mock-tests'
 import Reports from './components/Reports'
 import NotFound from './components/NotFound'
+import FetchData from './components/FetchData'
 
 const router = createBrowserRouter(
   [
@@ -57,6 +58,10 @@ const router = createBrowserRouter(
         <Navbar/>
         <ParaComp/>
       </div>
+    },
+    {
+      path: 'display', 
+      element: <FetchData/>
     },
     {
       path: '*',

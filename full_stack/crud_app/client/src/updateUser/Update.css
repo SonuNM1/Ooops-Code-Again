@@ -1,0 +1,90 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+/* Container */
+.addUser {
+    background: #f9f9f9;
+    width: 30%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.addUser h3 {
+    text-align: center;
+    font-weight: 600;
+    color: #007b83;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+.addUserForm .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.addUserForm .inputGroup label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input Fields */
+.addUserForm .inputGroup input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.addUserForm .inputGroup input:focus {
+    border-color: #007b83;
+    box-shadow: 0 0 5px rgba(0, 123, 131, 0.5);
+}
+
+/* Buttons */
+.addUserForm .inputGroup button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #007b83;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.addUserForm .inputGroup button:hover {
+    background: #005f62;
+}
+
+/* Go Back Button */
+.addUser .btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+.addUser .btn-secondary:hover {
+    color: #005f62;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .addUser {
+        width: 90%;
+    }
+}

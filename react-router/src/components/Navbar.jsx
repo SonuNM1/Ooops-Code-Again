@@ -21,6 +21,11 @@ const Navbar = () => {
                 Dashboard
             </NavLink>
         </li>
+        <li>
+          <NavLink to='/display'>
+            Display
+          </NavLink>
+        </li>
       </ul>
     </div>
   )
