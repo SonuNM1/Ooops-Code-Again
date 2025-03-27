@@ -3,7 +3,7 @@ import { features } from "../constants";
 
 const FeatureSection = () => {
   return (
-    <div className="relative mt-15 border-b border-neutral-800 min-h-[800px]">
+    <div className="relative mt-15 border-b border-neutral-800 min-h-[800px]" id="services">
     
       <div className="text-center">
         <span className="bg-neutral-900 text-orange-500 rounded-full h-6 text-sm font-medium px-2 py-1 uppercase">
@@ -11,7 +11,7 @@ const FeatureSection = () => {
             Easily build
             <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
               {" "}
-              your code{" "}
+              your website{" "}
             </span>
           </h2>
         </span>

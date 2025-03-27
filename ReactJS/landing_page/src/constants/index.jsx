@@ -1,30 +1,21 @@
-import { BotMessageSquare } from "lucide-react";
-import { BatteryCharging } from "lucide-react";
-import { Fingerprint } from "lucide-react";
-import { ShieldHalf } from "lucide-react";
-import { PlugZap } from "lucide-react";
-import { GlobeLock } from "lucide-react";
+
+
+import { Code, Smartphone, Layers, ShieldCheck, Users, BarChart3 } from "lucide-react";
 
 import user1 from "../assets/profile-pictures/user1.jpg";
 import user2 from "../assets/profile-pictures/user2.jpeg";
 
-export const navItems = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Testimonials", href: "#" },
-];
 
 export const testimonials = [
   {
-    user: "John Doe",
-    company: "Stellar Solutions",
+    user: "Garima Joshi",
+    company: "Salesforce Developer",
     image: user1,
     text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
   },
   {
-    user: "Jane Smith",
-    company: "Blue Horizon Technologies",
+    user: "Badal Kumar",
+    company: "Coding Room",
     image: user2,
     text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
   },
@@ -32,119 +23,118 @@ export const testimonials = [
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    icon: <Code/>,
+    text: "Custom Web Development",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "Tailor-made websites built from scratch to match your brand's identity and business goals.",
   },
   {
-    icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
+    icon: <Smartphone/>,
+    text: "Mobile-Responsive Design",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Seamlessly adaptive layouts for an optimal browsing experience on all devices.",
   },
   {
-    icon: <ShieldHalf />,
-    text: "Built-in Templates",
+    icon: <Layers/>,
+    text: "SEO Optimization",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Rank higher on search engines with our performance-driven SEO strategies.",
   },
   {
-    icon: <BatteryCharging />,
-    text: "Real-Time Preview",
+    icon: <ShieldCheck/>,
+    text: "Secure & Scalable Solutions",
     description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+      "Ensure a safe and scalable online presence with our robust security measures.",
   },
   {
-    icon: <PlugZap />,
-    text: "Collaboration Tools",
+    icon: <Users/>,
+    text: "User-Friendly CMS",
     description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+      "Easily manage your website’s content with intuitive Content Management Systems.",
   },
   {
-    icon: <GlobeLock />,
-    text: "Analytics Dashboard",
+    icon: <BarChart3/>,
+    text: "Analytics & Performance Tracking",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Gain insights into visitor behavior and optimize your website for better conversions.",
   },
 ];
 
 export const checklistItems = [
   {
-    title: "Code merge made easy",
+    title: "Seamless Code Merging",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Effortlessly merge changes with streamlined version control, reducing conflicts.",
   },
   {
-    title: "Review code without worry",
+    title: "Efficient Code Reviews",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Collaborate with your team using smart suggestions and inline comments.",
   },
   {
-    title: "AI Assistance to reduce time",
+    title: "AI-Powered Assistance",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Get intelligent code suggestions and error detection to boost productivity.",
   },
   {
-    title: "Share work in minutes",
+    title: "Instant Collaboration",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Share your progress with teammates in real-time for faster feedback loops.",
   },
 ];
 
 export const pricingOptions = [
   {
-    title: "Free",
-    price: "$0",
+    title: "Basic Portfolio",
+    price: "₹8,000",
     features: [
-      "Private board sharing",
-      "5 Gb Storage",
-      "Web Analytics",
-      "Private Mode",
+      "Custom portfolio website (1-3 pages)",
+      "Responsive design for mobile & desktop",
+      "Basic SEO optimization",
+      "Contact form integration",
+      "Deployment & hosting support",
     ],
   },
   {
-    title: "Pro",
-    price: "$10",
+    title: "Advanced Portfolio",
+    price: "₹15,000",
     features: [
-      "Private board sharing",
-      "10 Gb Storage",
-      "Web Analytics (Advance)",
-      "Private Mode",
+      "Custom portfolio website (4 pages)",
+      "Enhanced UI/UX design",
+      "SEO optimization & analytics setup",
+      "Social media integration",
+      "Basic animations & interactivity",
     ],
   },
   {
-    title: "Enterprise",
-    price: "$200",
+    title: "E-commerce Enterprise",
+    price: "₹30,000",
     features: [
-      "Private board sharing",
-      "Unlimited Storage",
-      "High Performance Network",
-      "Private Mode",
+      "Fully dynamic e-commerce website",
+      "Unlimited pages & product listings",
+      "Payment gateway integration",
+      "Admin dashboard for order management",
+      "Advanced security & scalability",
     ],
   },
 ];
 
-export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
-  { href: "#", text: "Community Forums" },
+export const navItems = [
+  { label: "Services", href: "#services" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const platformLinks = [
-  { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
-  { href: "#", text: "Release Notes" },
+  { href: "#services", text: "Our Services" },
+  { href: "#pricing", text: "Pricing Plans" },
+  { href: "#testimonials", text: "Client Testimonials" }
 ];
 
-export const communityLinks = [
-  { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
-];
+
+export const contactInfo = {
+  whatsapp: "7903648044",
+  email: "sonumahto362000@gmail.com",
+};
+
