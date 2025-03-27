@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  /* Stars container to keep stars in a row */
+  .stars {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Common star styling */
+  span {
+    cursor: pointer;
+    padding: 0 5px;
+  }
+  
+  /* Colored and uncolored stars */
+  .colored {
+    color: gold;
+  }
+  
+  .unColor {
+    color: lightgray;
+  }
+  
+  /* Rating text displayed below stars */
+  .rating-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
